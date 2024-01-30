@@ -62,7 +62,10 @@ function App() {
   }
 
   const openIframe = () => setIsIframeOpen(true);
-  const closeIframe = () => setIsIframeOpen(false);
+  const closeIframe = () => {
+    setIframeHeight(0);
+    setIsIframeOpen(false);
+  }
 
   const renderControls = () => {
     const changeToken: InputProps['onChange'] = (event) => {
